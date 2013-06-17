@@ -22,8 +22,8 @@ conf = ->
   # 
   #################################################################
   
-  @app.title = "m2screen"
-  @app.initials = "m2s"
+  @app.title = "laserstingray-backbone"
+  @app.initials = "lsb"
   @app.host = if process.env.NODE_ENV == "development" then "http://localhost:3003" else "http://#{@app.title}.nodejitsu.com"
   @app.port = 3003
   @app.uploadDir = if process.env.NODE_ENV == "development" then "public\\uploads\\" else "public/uploads/"
@@ -79,21 +79,6 @@ conf = ->
   #################################################################
   
   @db.mongoUrl = process.env.MGIVE_STRING or "mongodb://localhost/#{@app.title}"
-
-  #################################################################
-  #
-  # api settings:
-  # 
-  # @param  {mgive}  String  mgive sms default url
-  # @param  {admeris.url}  String  admeris payment url
-  # @param  {admeris.merchantId}  Number  admeris merchantId
-  # 
-  #################################################################
-  
-  @api.mgive = "http://services.mobileaccord.com/api.ashx?responseType=json"
-  @api.admeris = {}
-  @api.admeris.url = "https://ec1.admeris.com/checkout/ccpayment.jsp"
-  @api.admeris.merchantId = 50239
 
   #################################################################
   #
