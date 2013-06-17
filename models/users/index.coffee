@@ -1,5 +1,4 @@
-string = require "../../../helpers"
-conf = require "../../../conf"
+conf = require "../../conf"
 
 supergoose = require "supergoose"
 

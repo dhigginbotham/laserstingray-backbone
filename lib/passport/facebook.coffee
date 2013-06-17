@@ -1,7 +1,7 @@
 express = require "express"
 app = module.exports = express()
 
-conf = require "../helpers/config"
+conf = require "../../conf"
 
 passport = require "passport"
 util = require "util"
@@ -9,7 +9,7 @@ util = require "util"
 FacebookStrategy = require("passport-facebook").Strategy
 
 # `User` Schema, required anywhere you find db calls
-User = require "../app/models/users"
+User = require "../../models/users"
 
 passport.serializeUser (user, done) ->
   done null, user

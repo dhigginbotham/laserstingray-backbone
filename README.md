@@ -1,4 +1,4 @@
 ## laserstringray-backbone 
 
 
-# this dont work.
+Still under heavy dev...

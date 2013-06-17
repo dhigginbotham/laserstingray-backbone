@@ -3,7 +3,7 @@ LocalStrategy = require("passport-local").Strategy
 
 VERBOSE = if process.env.NODE_ENV == "development" then false
 
-User = require "../app/models/users"
+User = require "../../models/users"
 # passport.serializeUser (user, done) ->
 #   done null, user
 
