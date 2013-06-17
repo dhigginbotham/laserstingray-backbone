@@ -22,6 +22,7 @@ _passport = require "./lib/passport"
 # routes, middleware, etc etc
 home_routes = require "./routes/home"
 
+#app.use on our routes.
 app.use home_routes
 
 # default application configuration
@@ -63,7 +64,6 @@ app.configure () ->
       err: err
 
 # go!
-
 server.listen process.env.port || conf.app.port, () ->
   col = conf.colors()
   console.log "#{col.cyan}::#{col.reset} starting engine #{col.cyan}::#{col.reset} #{conf.app.welcome} #{col.cyan}::#{col.reset} "
