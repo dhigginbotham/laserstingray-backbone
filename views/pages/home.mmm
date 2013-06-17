@@ -1,0 +1,7 @@
+{{> parts/nav}}
+<div class="container">
+  {{> parts/flash}}
+
+  <h2>Laserstingray</h2>
+  {{#user}}{{username}}{{/user}}
+</div>

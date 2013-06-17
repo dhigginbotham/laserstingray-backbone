@@ -1,0 +1,39 @@
+{
+  "name": "laserstingray-backbone",
+  "description": "backbone.js single page blog",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "David Higginbotham <davehigginbotham@gmail.com>",
+  "dependencies": {
+    "express": ">=3.0.3",
+    "mmm": ">=0.2.0",
+    "mongoose": ">=3.6.0",
+    "supergoose": "*",
+    "moment": "*",
+    "sockjs": "0.3.x",
+    "mkdirp": ">= 0.3.5",
+    "underscore": ">= 1.4.4",
+    "connect-flash": "0.1.0",
+    "connect-roles": "2.0.x",
+    "passport": "0.1.x",
+    "passport-local": "0.1.6",
+    "passport-facebook": ">= 0.0.0",
+    "bcrypt": "0.7.5",
+    "paginate": "0.1.x",
+    "request": "2.20.x"
+  },
+  "devDependencies": {
+    "coffee-script": ">= 1.3.3",
+    "colors": "*",
+    "mocha": "*",
+    "expect.js": "*",
+    "zombie": "*"
+  },
+  "engines": {
+    "node": "0.8.x"
+  },
+  "subdomain": "text2screen",
+  "scripts": {
+    "start": "coffee app.coffee"
+  }
+}
