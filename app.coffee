@@ -4,8 +4,10 @@
 # get this party started
 express = require "express"
 flash = require "connect-flash"
-app = express()
-require "./server"
+app = module.exports = express()
+
+server = require("./server")(app)
+
 # global connection sharing
 _db = require "./models/db"
 
@@ -25,7 +27,7 @@ app.use home_routes
 # default application configuration
 app.configure () ->
   app.set "port", process.env.port || conf.app.port
-  app.set "views", "./app/views"
+  app.set "views", "./views"
   app.set "view engine", "mmm"
   app.set "layout", "layout"
   app.use express.logger "dev"
@@ -59,3 +61,14 @@ app.configure () ->
     res.render "pages/404", 
       title: "500: Internal Server Error"
       err: err
+
+# go!
+
+server.listen process.env.port || conf.app.port, () ->
+  col = conf.colors()
+  console.log "#{col.cyan}::#{col.reset} starting engine #{col.cyan}::#{col.reset} #{conf.app.welcome} #{col.cyan}::#{col.reset} "
+
+process.on "SIGINT", () ->
+  db.close()
+  server.close()
+  process.exit()
