@@ -1,11 +1,12 @@
 # get this party started
 express = require "express"
+conf = require "./conf"
 
 sockjs = require "sockjs"
 sockjs_conf = require "./lib/sockjs/config"
 sockjs_app = require "./lib/sockjs"
 
-app = module.exports = express()
+app = express()
 server = require("http").createServer app
 
 sockjs_app.install sockjs_conf.server_opts, server
@@ -19,3 +20,5 @@ process.on "SIGINT", () ->
   db.close()
   server.close()
   process.exit()
+
+exports = module.exports = app

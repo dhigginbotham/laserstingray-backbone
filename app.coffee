@@ -5,7 +5,7 @@
 express = require "express"
 flash = require "connect-flash"
 app = express()
-
+require "./server"
 # global connection sharing
 _db = require "./models/db"
 
