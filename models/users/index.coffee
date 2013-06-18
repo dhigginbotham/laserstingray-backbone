@@ -41,7 +41,7 @@ UserSchema = new Schema
 UserSchema.pre "save", (next) ->
   self = @
 
-  if self.mgive.accessToken || !self.isModified "password"
+  if !self.isModified "password"
     return next()
   else
     bcrypt.genSalt SALT_WORK_FACTOR, (err, salt) ->

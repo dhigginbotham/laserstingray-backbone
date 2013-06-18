@@ -12,15 +12,6 @@ scripts = module.exports =
     {src: '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', name: 'jquery.js', where: 'foot', uri: null, type: 'js', exclude: null}
     {src: '//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js', name: 'bootstrap.js', where: 'foot', uri: null, type: 'js', exclude: null}
     {src: 'http://cdn.sockjs.org/sockjs-0.3.min.js', name: 'sockjs.js', where: 'head', uri: null, type: 'js', exclude: null}
-    {src: '/js/sockets.js', name: 'sockets.js', where: 'foot', uri: null, type: 'js', exclude: null}
-    {src: '/js/vendor/ckedit/ckeditor.js', name: 'ckeditor.js', where: 'foot', uri: '/apps/add', type: 'js', exclude: null}
-    {src: '/js/vendor/ckedit/config.js', name: 'config.js', where: 'foot', uri: '/apps/add', type: 'js', exclude: null}
-    {src: '/js/vendor/ckedit/styles.js', name: 'styles.js', where: 'foot', uri: '/apps/add', type: 'js', exclude: null}
-    {src: '/js/vendor/ckedit/contents.css', name: 'contents.css', where: 'head', uri: '/apps/add', type: 'css', exclude: null}
-    {src: '/js/vendor/ckedit/ckeditor.js', name: 'ckeditor.js', where: 'foot', uri: '/apps/:id/edit', type: 'js', exclude: null}
-    {src: '/js/vendor/ckedit/config.js', name: 'config.js', where: 'foot', uri: '/apps/:id/edit', type: 'js', exclude: null}
-    {src: '/js/vendor/ckedit/styles.js', name: 'styles.js', where: 'foot', uri: '/apps/:id/edit', type: 'js', exclude: null}
-    {src: '/js/vendor/ckedit/contents.css', name: 'contents.css', where: 'head', uri: '/apps/:id/edit', type: 'css', exclude: null}
   ]
 
   logging: (arr, req, fn) ->

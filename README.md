@@ -1,4 +1,2 @@
 ## laserstringray-backbone 
-
-
-Still under heavy dev...
+nothing to see here..
