@@ -20,7 +20,7 @@ conf = ->
   # @param  {uploadDir}  String  default upload dir -we assume our 
   @app.title = "laserstingray-backbone"
   @app.initials = "lsb"
-  @app.host = if process.env.NODE_ENV == "development" then "http://localhost:3003" else "http://#{@app.title}.nodejitsu.com"
+  @app.host = if process.env.NODE_ENV == "development" then "http://localhost:3003" else "http://#{@app.initials}.nodejitsu.com"
   @app.port = 3003
   @app.uploadDir = if process.env.NODE_ENV == "development" then "public\\uploads\\" else "public/uploads/"
   @app.welcome = "#{@app.title} server listening on port #{process.env.port} in #{process.env.NODE_ENV} mode" if process.env.NODE_ENV == "development"

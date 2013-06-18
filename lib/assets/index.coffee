@@ -39,8 +39,8 @@ scripts = module.exports =
 
   embed: (req, res, next) ->
     # written by david higginbotham, didn't really need to much
-    # or something as built out like require.js so I wrote this
-    # little guy to load scripts or css.. I may figure out more
+    # or something as built out like [connect-assets](https://github.com/adunkman/connect-assets) 
+    # so I wrote this little guy to load scripts or css.. I may figure out more
     # ways to extend this in the future, but for now it works
     # and I like it very much for my uses.
 

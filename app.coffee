@@ -25,10 +25,12 @@ home_routes = require "./routes/home"
 #app.use on our routes.
 app.use home_routes
 
+_views = path.join __dirname, "views"
+
 # default application configuration
 app.configure () ->
   app.set "port", process.env.port || conf.app.port
-  app.set "views", "./views"
+  app.set "views", _views
   app.set "view engine", "mmm"
   app.set "layout", "layout"
   app.use express.logger "dev"
@@ -63,12 +65,3 @@ app.configure () ->
       title: "500: Internal Server Error"
       err: err
 
-# go!
-server.listen process.env.port || conf.app.port, () ->
-  col = conf.colors()
-  console.log "#{col.cyan}::#{col.reset} starting engine #{col.cyan}::#{col.reset} #{conf.app.welcome} #{col.cyan}::#{col.reset} "
-
-process.on "SIGINT", () ->
-  db.close()
-  server.close()
-  process.exit()
